@@ -47,12 +47,12 @@ public class ZipFileTest {
 
             ZipEntry zipEntryXlsx = zf.getEntry("XLSXFile.xlsx");
             try (InputStream streamXlsx = zf.getInputStream(zipEntryXlsx)){
-            XLS parsedXlsx = new XLS(streamXlsx);
+                XLS parsedXlsx = new XLS(streamXlsx);
 
-            assertThat(parsedXlsx.excel.getSheetAt(0).getRow(0).getCell(0).getStringCellValue())
-                    .isEqualTo("a1");
-            assertThat(parsedXlsx.excel.getSheetAt(0).getRow(1).getCell(1).getStringCellValue())
-                    .isEqualTo("b2");
+                assertThat(parsedXlsx.excel.getSheetAt(0).getRow(0).getCell(0).getStringCellValue())
+                        .isEqualTo("a1");
+                assertThat(parsedXlsx.excel.getSheetAt(0).getRow(1).getCell(1).getStringCellValue())
+                        .isEqualTo("b2");
             }
         }
     }
