@@ -13,8 +13,9 @@ def selenideVersion = "6.1.2",
     javaFakerVersion = "1.0.2",
     allureSelenideVersion = "2.17.2",
     pdfTestVersion = "1.7.0",
-    xlsTestVersion = "1.5.0",
-    opencsvVersion = "5.5.2"
+    xlsTestVersion = "1.4.3",
+    opencsvVersion = "5.5.2",
+    assertjVersion = "3.21.0"
 
 group 'qa.guru.allure'
 version '1.0-SNAPSHOT'
@@ -40,7 +41,8 @@ dependencies {
             "org.junit.jupiter:junit-jupiter-api:$junitVersion",
             "com.codeborne:pdf-test:$pdfTestVersion",
             "com.codeborne:xls-test:$xlsTestVersion",
-            "com.opencsv:opencsv:$opencsvVersion")
+            "com.opencsv:opencsv:$opencsvVersion",
+            "org.assertj:assertj-core:$assertjVersion")
     testRuntimeOnly(
             "org.slf4j:slf4j-simple:$slf4jVersion",
             "org.junit.jupiter:junit-jupiter-engine:$junitVersion")
